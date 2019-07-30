@@ -1,0 +1,22 @@
+version: '2.4'
+
+services:
+  iris:
+    image: store/intersystems/iris:2019.2.0.107.0-community
+    init: true
+    environment: 
+      ISC_DATA_DIRECTORY: /opt/config/iris
+    volumes:
+      - ./config:/opt/config
+    ports:
+      - 52773
+  web:
+    build: .
+    init: true
+    links:
+      - iris
+    ports:
+      - 80:80
+    environment: 
+      SERVER_HOST: iris
+      SERVER_PORT: 51773
