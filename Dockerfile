@@ -1,6 +1,6 @@
 FROM httpd:2.4
 
-ARG version=2019.2.0.107.0 
+ARG version=2020.2.0.211.0 
 ARG platform=lnxubuntux64
 ADD WebGateway-${version}-${platform}.tar.gz /tmp/
 

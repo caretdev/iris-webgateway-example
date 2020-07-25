@@ -17,7 +17,7 @@ configName=${CONFIG_NAME-LOCAL}
 host=${SERVER_HOST-localhost}
 port=${SERVER_PORT-51773}
 username=${USERNAME-CSPSystem}
-password=${USERNAME-SYS}
+password=${PASSWORD-SYS}
 
 # [SYSTEM]
 ./cvtcfg setparameter "CSP.ini" "[SYSTEM]" "System_Manager" "*.*.*.*"
